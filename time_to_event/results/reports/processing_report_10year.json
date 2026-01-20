@@ -1,0 +1,425 @@
+{
+  "validation": {
+    "valid": true,
+    "issues": [],
+    "statistics": {
+      "n_samples": 37799,
+      "n_features": 57,
+      "time_to_event_mean": 336.5604910182809,
+      "time_to_event_median": 35.0,
+      "time_to_event_min": 0.0,
+      "time_to_event_max": 7584.0,
+      "event_rate": 0.04690600280430699,
+      "n_events": 1773,
+      "n_censored": 36026
+    }
+  },
+  "feature_names": [
+    "HR",
+    "RR",
+    "SBP",
+    "SaO2",
+    "BT",
+    "Gender",
+    "TS",
+    "Age",
+    "Hgb",
+    "platelet",
+    "WBC Count",
+    "ALT",
+    "AST",
+    "Albumin",
+    "Alkaline phosphatase",
+    "BUN",
+    "CRP",
+    "Chloride",
+    "Creatinin",
+    "Glucose",
+    "Lactate",
+    "Potassium",
+    "Sodium",
+    "Total bilirubin",
+    "Total calcium",
+    "Total protein",
+    "time_since_admission_hours",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "day_sin",
+    "day_cos",
+    "Age_x_Hgb",
+    "Age_x_platelet",
+    "Age_x_WBC Count",
+    "Age_x_ALT",
+    "Age_x_AST",
+    "HR_x_Hgb",
+    "HR_x_platelet",
+    "HR_x_WBC Count",
+    "RR_x_Hgb",
+    "RR_x_platelet",
+    "RR_x_WBC Count",
+    "SBP_x_Hgb",
+    "SBP_x_platelet",
+    "SBP_x_WBC Count",
+    "HR_mean_prev",
+    "HR_std_prev",
+    "HR_trend",
+    "RR_mean_prev",
+    "RR_std_prev",
+    "RR_trend",
+    "SBP_mean_prev",
+    "SBP_std_prev",
+    "SBP_trend"
+  ],
+  "scaler_info": {
+    "HR": {
+      "mean": 88.96272388158417,
+      "std": 20.013882476189025,
+      "method": "standardize"
+    },
+    "RR": {
+      "mean": 20.25022355088759,
+      "std": 5.2153311718429025,
+      "method": "standardize"
+    },
+    "SBP": {
+      "mean": 125.40391280192598,
+      "std": 22.28679610868056,
+      "method": "standardize"
+    },
+    "SaO2": {
+      "mean": 97.26296991983915,
+      "std": 2.564682980060301,
+      "method": "standardize"
+    },
+    "BT": {
+      "mean": 36.526538003650884,
+      "std": 0.3675674208311927,
+      "method": "standardize"
+    },
+    "Gender": {
+      "mean": 0.5141934971824651,
+      "std": 0.49980511543451495,
+      "method": "standardize"
+    },
+    "TS": {
+      "mean": 126.05791819889416,
+      "std": 116.77990180577984,
+      "method": "standardize"
+    },
+    "Age": {
+      "mean": 43.848726156776635,
+      "std": 2.159771356389427,
+      "method": "standardize"
+    },
+    "Hgb": {
+      "mean": 9.96755602000053,
+      "std": 1.440002912272025,
+      "method": "standardize"
+    },
+    "platelet": {
+      "mean": 152.30217730627794,
+      "std": 93.50203005323228,
+      "method": "standardize"
+    },
+    "WBC Count": {
+      "mean": 0.45368925103838725,
+      "std": 0.49785728065025625,
+      "method": "standardize"
+    },
+    "ALT": {
+      "mean": 27.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "AST": {
+      "mean": 35.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Albumin": {
+      "mean": 2.899999999999999,
+      "std": 8.88190168635853e-16,
+      "method": "standardize"
+    },
+    "Alkaline phosphatase": {
+      "mean": 95.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "BUN": {
+      "mean": 20.1,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "CRP": {
+      "mean": 9.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Chloride": {
+      "mean": 1.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Creatinin": {
+      "mean": 0.8000000000000002,
+      "std": 1.1102377107948162e-16,
+      "method": "standardize"
+    },
+    "Glucose": {
+      "mean": 2.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Lactate": {
+      "mean": 1.8999999999999995,
+      "std": 4.440950843179265e-16,
+      "method": "standardize"
+    },
+    "Potassium": {
+      "mean": 1.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Sodium": {
+      "mean": 1.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Total bilirubin": {
+      "mean": 1.17,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "Total calcium": {
+      "mean": 8.200000000000001,
+      "std": 1.776380337271706e-15,
+      "method": "standardize"
+    },
+    "Total protein": {
+      "mean": 5.900000000000001,
+      "std": 8.88190168635853e-16,
+      "method": "standardize"
+    },
+    "time_since_admission_hours": {
+      "mean": 115.79734913622053,
+      "std": 309.6525127496321,
+      "method": "standardize"
+    },
+    "hour_of_day": {
+      "mean": 9.675520516415778,
+      "std": 7.47989396120899,
+      "method": "standardize"
+    },
+    "day_of_week": {
+      "mean": 3.049392841080452,
+      "std": 1.9454760527833839,
+      "method": "standardize"
+    },
+    "is_weekend": {
+      "mean": 0.29916135347495965,
+      "std": 0.45789669688463824,
+      "method": "standardize"
+    },
+    "hour_sin": {
+      "mean": -0.02989445180899158,
+      "std": 0.648013447649123,
+      "method": "standardize"
+    },
+    "hour_cos": {
+      "mean": 0.11348142080460655,
+      "std": 0.7525509634736449,
+      "method": "standardize"
+    },
+    "day_sin": {
+      "mean": -0.03844381123926732,
+      "std": 0.7117625234365635,
+      "method": "standardize"
+    },
+    "day_cos": {
+      "mean": -0.05064664300575686,
+      "std": 0.6995551805422906,
+      "method": "standardize"
+    },
+    "Age_x_Hgb": {
+      "mean": 437.24010952670704,
+      "std": 68.40463948561883,
+      "method": "standardize"
+    },
+    "Age_x_platelet": {
+      "mean": 6669.775496706262,
+      "std": 4112.679978146532,
+      "method": "standardize"
+    },
+    "Age_x_WBC Count": {
+      "mean": 19.911399772480753,
+      "std": 21.898386882518516,
+      "method": "standardize"
+    },
+    "Age_x_ALT": {
+      "mean": 1183.9156062329691,
+      "std": 58.31382662251454,
+      "method": "standardize"
+    },
+    "Age_x_AST": {
+      "mean": 1534.705415487182,
+      "std": 75.59199747362996,
+      "method": "standardize"
+    },
+    "HR_x_Hgb": {
+      "mean": 888.2920732029949,
+      "std": 243.13989552256976,
+      "method": "standardize"
+    },
+    "HR_x_platelet": {
+      "mean": 13641.41686287997,
+      "std": 9163.820339065873,
+      "method": "standardize"
+    },
+    "HR_x_WBC Count": {
+      "mean": 40.29233577607873,
+      "std": 46.371680447135525,
+      "method": "standardize"
+    },
+    "RR_x_Hgb": {
+      "mean": 201.90811595544855,
+      "std": 59.296986108349145,
+      "method": "standardize"
+    },
+    "RR_x_platelet": {
+      "mean": 3108.6055451202415,
+      "std": 2149.4486708750055,
+      "method": "standardize"
+    },
+    "RR_x_WBC Count": {
+      "mean": 9.007637768194925,
+      "std": 10.48997337352313,
+      "method": "standardize"
+    },
+    "SBP_x_Hgb": {
+      "mean": 1247.9574373660678,
+      "std": 279.72138472205705,
+      "method": "standardize"
+    },
+    "SBP_x_platelet": {
+      "mean": 19148.883475753326,
+      "std": 12436.687894368557,
+      "method": "standardize"
+    },
+    "SBP_x_WBC Count": {
+      "mean": 58.14623402735522,
+      "std": 65.51417354530992,
+      "method": "standardize"
+    },
+    "HR_mean_prev": {
+      "mean": 87.67938078595473,
+      "std": 21.506235907928133,
+      "method": "standardize"
+    },
+    "HR_std_prev": {
+      "mean": 7.731859214214469,
+      "std": 4.461533163463321,
+      "method": "standardize"
+    },
+    "HR_trend": {
+      "mean": -0.029934654355935342,
+      "std": 6.963438832050382,
+      "method": "standardize"
+    },
+    "RR_mean_prev": {
+      "mean": 19.807937962374396,
+      "std": 4.883923085516697,
+      "method": "standardize"
+    },
+    "RR_std_prev": {
+      "mean": 3.0523252532985476,
+      "std": 1.449120086705696,
+      "method": "standardize"
+    },
+    "RR_trend": {
+      "mean": 0.0042858276673986085,
+      "std": 3.406729246871235,
+      "method": "standardize"
+    },
+    "SBP_mean_prev": {
+      "mean": 122.40186763506428,
+      "std": 24.19713300092543,
+      "method": "standardize"
+    },
+    "SBP_std_prev": {
+      "mean": 11.439021966298046,
+      "std": 5.592637819475065,
+      "method": "standardize"
+    },
+    "SBP_trend": {
+      "mean": -0.01216963411730469,
+      "std": 11.889254308326105,
+      "method": "standardize"
+    }
+  },
+  "outlier_info": {
+    "HR": {
+      "count": 1184,
+      "percentage": 3.1323579988888595,
+      "lower_bound": 38.5,
+      "upper_bound": 138.5
+    },
+    "RR": {
+      "count": 585,
+      "percentage": 1.547659991005053,
+      "lower_bound": 6.5,
+      "upper_bound": 34.5
+    },
+    "SBP": {
+      "count": 49,
+      "percentage": 0.12963305907563694,
+      "lower_bound": 59.5,
+      "upper_bound": 191.5
+    },
+    "SaO2": {
+      "count": 654,
+      "percentage": 1.7302045027646233,
+      "lower_bound": 90.0,
+      "upper_bound": 106.0
+    },
+    "BT": {
+      "count": 2265,
+      "percentage": 5.992222016455462,
+      "lower_bound": 35.69999999999999,
+      "upper_bound": 37.30000000000001
+    },
+    "TS": {
+      "count": 4533,
+      "percentage": 11.992380750813513,
+      "lower_bound": -149.75,
+      "upper_bound": 356.25
+    },
+    "Hgb": {
+      "count": 1633,
+      "percentage": 4.320220111643165,
+      "lower_bound": 6.450000000000001,
+      "upper_bound": 13.249999999999998
+    },
+    "platelet": {
+      "count": 434,
+      "percentage": 1.1481785232413557,
+      "lower_bound": -141.0,
+      "upper_bound": 427.0
+    },
+    "WBC Count": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1.5,
+      "upper_bound": 2.5
+    },
+    "ALT": {
+      "count": 10069,
+      "percentage": 26.638270853726286,
+      "lower_bound": 27.0,
+      "upper_bound": 27.0
+    }
+  }
+}

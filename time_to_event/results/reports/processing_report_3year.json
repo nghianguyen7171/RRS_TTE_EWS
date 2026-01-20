@@ -1,0 +1,425 @@
+{
+  "validation": {
+    "valid": true,
+    "issues": [],
+    "statistics": {
+      "n_samples": 317006,
+      "n_features": 57,
+      "time_to_event_mean": 3394.3957779978928,
+      "time_to_event_median": 103.0,
+      "time_to_event_min": 1.0,
+      "time_to_event_max": 18795.0,
+      "event_rate": 0.003287004031469436,
+      "n_events": 1042,
+      "n_censored": 315964
+    }
+  },
+  "feature_names": [
+    "Total bilirubin",
+    "Glucose",
+    "AST",
+    "BT",
+    "ALT",
+    "SBP",
+    "Potassium",
+    "Total calcium",
+    "Lactate",
+    "Chloride",
+    "SaO2",
+    "Alkaline phosphatase",
+    "Age",
+    "platelet",
+    "Creatinin",
+    "WBC Count",
+    "HR",
+    "Sodium",
+    "Gender",
+    "Total protein",
+    "CRP",
+    "TS",
+    "RR",
+    "Albumin",
+    "Hgb",
+    "BUN",
+    "time_since_admission_hours",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "day_sin",
+    "day_cos",
+    "Age_x_Total bilirubin",
+    "Age_x_Glucose",
+    "Age_x_AST",
+    "Age_x_ALT",
+    "Age_x_Potassium",
+    "BT_x_Total bilirubin",
+    "BT_x_Glucose",
+    "BT_x_AST",
+    "SBP_x_Total bilirubin",
+    "SBP_x_Glucose",
+    "SBP_x_AST",
+    "SaO2_x_Total bilirubin",
+    "SaO2_x_Glucose",
+    "SaO2_x_AST",
+    "BT_mean_prev",
+    "BT_std_prev",
+    "BT_trend",
+    "SBP_mean_prev",
+    "SBP_std_prev",
+    "SBP_trend",
+    "SaO2_mean_prev",
+    "SaO2_std_prev",
+    "SaO2_trend"
+  ],
+  "scaler_info": {
+    "Total bilirubin": {
+      "mean": 0.6000000000000002,
+      "std": 2.220449551473146e-16,
+      "method": "standardize"
+    },
+    "Glucose": {
+      "mean": 2.0,
+      "std": 1.0,
+      "method": "standardize"
+    },
+    "AST": {
+      "mean": 26.98265647968808,
+      "std": 2.704160880183502,
+      "method": "standardize"
+    },
+    "BT": {
+      "mean": 36.3551861794414,
+      "std": 0.2958711057879202,
+      "method": "standardize"
+    },
+    "ALT": {
+      "mean": 18.08527283395267,
+      "std": 2.640295634524469,
+      "method": "standardize"
+    },
+    "SBP": {
+      "mean": 110.5925124445594,
+      "std": 19.919878819301058,
+      "method": "standardize"
+    },
+    "Potassium": {
+      "mean": 1.4884702497744522,
+      "std": 0.5556359221096124,
+      "method": "standardize"
+    },
+    "Total calcium": {
+      "mean": 8.800000000000006,
+      "std": 5.3290789235355495e-15,
+      "method": "standardize"
+    },
+    "Lactate": {
+      "mean": 2.2000000000000015,
+      "std": 1.3322697308838874e-15,
+      "method": "standardize"
+    },
+    "Chloride": {
+      "mean": 1.5492104250392738,
+      "std": 0.5555293445872608,
+      "method": "standardize"
+    },
+    "SaO2": {
+      "mean": 73.87129581143574,
+      "std": 14.221870521809691,
+      "method": "standardize"
+    },
+    "Alkaline phosphatase": {
+      "mean": 90.8377917137215,
+      "std": 9.300855606335013,
+      "method": "standardize"
+    },
+    "Age": {
+      "mean": 65.95566740061702,
+      "std": 13.315119719978386,
+      "method": "standardize"
+    },
+    "platelet": {
+      "mean": 200.61850911339218,
+      "std": 21.160362270750486,
+      "method": "standardize"
+    },
+    "Creatinin": {
+      "mean": 0.8000000000000005,
+      "std": 4.440899102946292e-16,
+      "method": "standardize"
+    },
+    "WBC Count": {
+      "mean": 0.3507473044674233,
+      "std": 0.47720472675363457,
+      "method": "standardize"
+    },
+    "HR": {
+      "mean": 71.81587414749248,
+      "std": 15.64546959295176,
+      "method": "standardize"
+    },
+    "Sodium": {
+      "mean": 1.4164053677217465,
+      "std": 0.6509011561585127,
+      "method": "standardize"
+    },
+    "Gender": {
+      "mean": 0.38403689520072176,
+      "std": 0.4863674583441239,
+      "method": "standardize"
+    },
+    "Total protein": {
+      "mean": 6.706096730030348,
+      "std": 0.24246768230446625,
+      "method": "standardize"
+    },
+    "CRP": {
+      "mean": 1.1577455947206046,
+      "std": 0.749640432551627,
+      "method": "standardize"
+    },
+    "TS": {
+      "mean": 52.45466331867536,
+      "std": 30.948908887796666,
+      "method": "standardize"
+    },
+    "RR": {
+      "mean": 19.08097638530501,
+      "std": 1.9180636770545956,
+      "method": "standardize"
+    },
+    "Albumin": {
+      "mean": 3.7244498526841756,
+      "std": 0.13589318348284624,
+      "method": "standardize"
+    },
+    "Hgb": {
+      "mean": 11.499876343034517,
+      "std": 0.5327272138911863,
+      "method": "standardize"
+    },
+    "BUN": {
+      "mean": 15.790104761424075,
+      "std": 1.468802604363475,
+      "method": "standardize"
+    },
+    "time_since_admission_hours": {
+      "mean": 1728.38211895043,
+      "std": 4379.859282458507,
+      "method": "standardize"
+    },
+    "hour_of_day": {
+      "mean": 11.797016460256273,
+      "std": 6.8751363119659095,
+      "method": "standardize"
+    },
+    "day_of_week": {
+      "mean": 3.1482905686327705,
+      "std": 1.9702252106871563,
+      "method": "standardize"
+    },
+    "is_weekend": {
+      "mean": 0.3033317981363129,
+      "std": 0.45969803675336757,
+      "method": "standardize"
+    },
+    "hour_sin": {
+      "mean": -0.03857462339595752,
+      "std": 0.7124397457855369,
+      "method": "standardize"
+    },
+    "hour_cos": {
+      "mean": -0.00971722741078,
+      "std": 0.7006071167772432,
+      "method": "standardize"
+    },
+    "day_sin": {
+      "mean": -0.0531831524709512,
+      "std": 0.7016635352467941,
+      "method": "standardize"
+    },
+    "day_cos": {
+      "mean": -0.04862772317862227,
+      "std": 0.7088570506662764,
+      "method": "standardize"
+    },
+    "Age_x_Total bilirubin": {
+      "mean": 39.57340044037021,
+      "std": 7.989071831987032,
+      "method": "standardize"
+    },
+    "Age_x_Glucose": {
+      "mean": 131.91133480123403,
+      "std": 26.63023943995677,
+      "method": "standardize"
+    },
+    "Age_x_AST": {
+      "mean": 1778.2969483227446,
+      "std": 396.8004362235285,
+      "method": "standardize"
+    },
+    "Age_x_ALT": {
+      "mean": 1188.6076071115376,
+      "std": 282.7289717068689,
+      "method": "standardize"
+    },
+    "Age_x_Potassium": {
+      "mean": 98.10899572878746,
+      "std": 42.67871976293804,
+      "method": "standardize"
+    },
+    "BT_x_Total bilirubin": {
+      "mean": 21.813111707664834,
+      "std": 0.17752266347275236,
+      "method": "standardize"
+    },
+    "BT_x_Glucose": {
+      "mean": 72.7103723588828,
+      "std": 0.5917422115758404,
+      "method": "standardize"
+    },
+    "BT_x_AST": {
+      "mean": 980.9576066383602,
+      "std": 98.64791864776552,
+      "method": "standardize"
+    },
+    "SBP_x_Total bilirubin": {
+      "mean": 66.35550746673567,
+      "std": 11.951927291580635,
+      "method": "standardize"
+    },
+    "SBP_x_Glucose": {
+      "mean": 221.1850248891188,
+      "std": 39.839757638602116,
+      "method": "standardize"
+    },
+    "SBP_x_AST": {
+      "mean": 2982.408796678927,
+      "std": 610.3445965487593,
+      "method": "standardize"
+    },
+    "SaO2_x_Total bilirubin": {
+      "mean": 44.32277748686145,
+      "std": 8.533122313085816,
+      "method": "standardize"
+    },
+    "SaO2_x_Glucose": {
+      "mean": 147.7425916228715,
+      "std": 28.443741043619383,
+      "method": "standardize"
+    },
+    "SaO2_x_AST": {
+      "mean": 1992.4401809429476,
+      "std": 431.254157112176,
+      "method": "standardize"
+    },
+    "BT_mean_prev": {
+      "mean": 36.06728410238225,
+      "std": 3.2964228466763568,
+      "method": "standardize"
+    },
+    "BT_std_prev": {
+      "mean": 0.2205189201356036,
+      "std": 0.09796290504831291,
+      "method": "standardize"
+    },
+    "BT_trend": {
+      "mean": -0.0002045702604997975,
+      "std": 0.18223778258756765,
+      "method": "standardize"
+    },
+    "SBP_mean_prev": {
+      "mean": 110.36141211798495,
+      "std": 15.75437890898595,
+      "method": "standardize"
+    },
+    "SBP_std_prev": {
+      "mean": 13.023984288436733,
+      "std": 7.0642274855663105,
+      "method": "standardize"
+    },
+    "SBP_trend": {
+      "mean": -0.03818855163624663,
+      "std": 12.41243542355558,
+      "method": "standardize"
+    },
+    "SaO2_mean_prev": {
+      "mean": 74.15631216798353,
+      "std": 12.327282093400385,
+      "method": "standardize"
+    },
+    "SaO2_std_prev": {
+      "mean": 8.408387442362994,
+      "std": 6.2598871137318906,
+      "method": "standardize"
+    },
+    "SaO2_trend": {
+      "mean": -0.08443688762988713,
+      "std": 6.948992945061719,
+      "method": "standardize"
+    }
+  },
+  "outlier_info": {
+    "BT": {
+      "count": 43169,
+      "percentage": 13.61772332384876,
+      "lower_bound": 35.75000000000001,
+      "upper_bound": 36.949999999999996
+    },
+    "SBP": {
+      "count": 40036,
+      "percentage": 12.629413954310012,
+      "lower_bound": 70.0,
+      "upper_bound": 150.0
+    },
+    "SaO2": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 21.5,
+      "upper_bound": 137.5
+    },
+    "HR": {
+      "count": 44061,
+      "percentage": 13.899106010611787,
+      "lower_bound": 40.0,
+      "upper_bound": 104.0
+    },
+    "TS": {
+      "count": 2329,
+      "percentage": 0.7346864097209517,
+      "lower_bound": -52.0,
+      "upper_bound": 156.0
+    },
+    "RR": {
+      "count": 46552,
+      "percentage": 14.684895554027369,
+      "lower_bound": 15.0,
+      "upper_bound": 23.0
+    },
+    "Total bilirubin": {
+      "count": 150401,
+      "percentage": 47.444212412383365,
+      "lower_bound": 0.6,
+      "upper_bound": 0.6
+    },
+    "Glucose": {
+      "count": 27911,
+      "percentage": 8.804565213276721,
+      "lower_bound": 2.0,
+      "upper_bound": 2.0
+    },
+    "AST": {
+      "count": 127508,
+      "percentage": 40.22258253786995,
+      "lower_bound": 23.0,
+      "upper_bound": 31.0
+    },
+    "ALT": {
+      "count": 117479,
+      "percentage": 37.058920020441256,
+      "lower_bound": 14.0,
+      "upper_bound": 22.0
+    }
+  }
+}
