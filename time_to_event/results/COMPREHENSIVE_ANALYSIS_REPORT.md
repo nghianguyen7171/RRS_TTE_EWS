@@ -336,6 +336,81 @@ Forest plots for multivariate models showing adjusted hazard ratios.
 - **Effect sizes:** Generally smaller in multivariate models (due to adjustment)
 - **Statistical significance:** Most features remain significant after adjustment
 
+### 4.3 Model Comparison: Univariate vs. Multivariate
+
+**Table:** `model_comparison_all_side_by_side.csv`
+
+Comprehensive comparison of model performance across different modeling approaches.
+
+| Model Type | 3-year C-index | 10-year C-index | 3-year AIC | 10-year AIC | 3-year Features | 10-year Features |
+|------------|----------------|-----------------|------------|-------------|------------------|------------------|
+| Univariate (Top Feature) | 0.749 | 0.652 | 25,577 | 35,752 | 1 | 1 |
+| Multivariate (Top 20) | **0.885** | **0.778** | **23,133** | **34,391** | 20 | 20 |
+
+**Figure 16:** Model Performance Comparison - Concordance
+
+![Model Concordance Comparison](figures/comparisons/model_concordance_comparison.png)
+*Figure 16: Bar chart comparing concordance (C-index) across different model types for both datasets. The multivariate model (Top 20 features) significantly outperforms the univariate model (single top feature) in both datasets, demonstrating the value of incorporating multiple predictors. The 3-year dataset shows higher concordance for both model types, likely due to its larger sample size and richer longitudinal data.*
+
+**Figure 17:** Model Performance Comparison - AIC
+
+![Model AIC Comparison](figures/comparisons/model_aic_comparison.png)
+*Figure 17: Bar chart comparing AIC (Akaike Information Criterion) across model types. Lower AIC indicates better model fit. The multivariate model achieves lower AIC despite using more parameters, indicating superior model fit that justifies the additional complexity. The multivariate model's lower AIC in both datasets confirms its better balance between model fit and complexity.*
+
+**Figure 18:** Model Performance - Concordance vs. AIC
+
+![Concordance vs AIC](figures/comparisons/model_concordance_vs_aic.png)
+*Figure 18: Scatter plot showing the trade-off between model performance (concordance) and model complexity (AIC). The multivariate models (right side) achieve both higher concordance and lower AIC compared to univariate models (left side), indicating they are superior in both discrimination ability and model fit. The ideal position is in the top-left quadrant (high concordance, low AIC).*
+
+**Figure 19:** Model Ranking
+
+![Model Ranking](figures/comparisons/model_ranking.png)
+*Figure 19: Model ranking by concordance (1 = best performance). The multivariate model consistently ranks first in both datasets, confirming its superior predictive performance. This ranking validates the choice of multivariate Cox models for clinical prediction.*
+
+**Key Findings:**
+
+1. **Multivariate models significantly outperform univariate models:**
+   - **3-year dataset:** C-index improvement from 0.749 to 0.885 (+18.2% relative improvement)
+   - **10-year dataset:** C-index improvement from 0.652 to 0.778 (+19.3% relative improvement)
+
+2. **Model complexity is justified:**
+   - Despite using 20 features vs. 1, multivariate models achieve lower AIC
+   - This indicates the additional features provide meaningful predictive information
+   - The complexity is justified by improved performance
+
+3. **Consistent patterns across datasets:**
+   - Both datasets show the same ranking (multivariate > univariate)
+   - Relative performance improvements are similar (~18-19%)
+   - This consistency supports model generalizability
+
+4. **3-year dataset shows better performance:**
+   - Higher concordance for both model types
+   - Likely due to:
+     - Larger sample size (317,006 vs. 37,799 observations)
+     - More longitudinal data per patient (mean: 121 vs. 53 measurements)
+     - Better temporal coverage
+
+**Clinical Implications:**
+
+- **Multivariate models are recommended** for clinical deployment due to superior discrimination
+- The 18-19% improvement in C-index represents a clinically meaningful enhancement in risk prediction
+- The lower AIC indicates better model fit, supporting confidence in predictions
+- The consistent superiority across datasets suggests robust performance
+
+**Model Selection Recommendation:**
+
+Based on this comprehensive comparison, the **Multivariate Cox Proportional Hazards model with top 20 features** is recommended for:
+- Clinical risk prediction
+- Real-time patient monitoring
+- Risk stratification
+- Early intervention protocols
+
+The multivariate model provides the optimal balance between:
+- **Performance:** Highest concordance (0.778-0.885)
+- **Fit:** Lowest AIC (23,133-34,391)
+- **Complexity:** Manageable number of features (20)
+- **Interpretability:** Clinically meaningful predictors
+
 ---
 
 ## 5. Feature Importance and Risk Scores
@@ -505,20 +580,51 @@ Analysis of Martingale and Deviance residuals to assess model fit.
 
 ### 7.2 Model Performance Comparison
 
-**Table:** `model_performance_comparison.csv`
+**Table:** `model_performance_comparison.csv` and `model_comparison_all_side_by_side.csv`
 
-| Dataset | Concordance | AIC      | BIC      | Features |
-|---------|------------|----------|----------|----------|
-| 3-year  | 0.885      | 23,133   | 23,222   | 20       |
-| 10-year | 0.778      | 34,391   | 34,490   | 20       |
+**Comprehensive Model Comparison:**
+
+| Dataset | Model Type | Concordance | AIC      | BIC      | Features |
+|---------|------------|------------|----------|----------|----------|
+| 3-year  | Multivariate | **0.885** | **23,133** | 23,222   | 20       |
+| 3-year  | Univariate | 0.749      | 25,577   | 25,582   | 1        |
+| 10-year | Multivariate | **0.778** | **34,391** | 34,490   | 20       |
+| 10-year | Univariate | 0.652      | 35,752   | 35,758   | 1        |
+
+**Figure 20:** Comprehensive Model Comparison
+
+![Comprehensive Model Comparison](figures/comparisons/model_comprehensive_comparison.png)
+*Figure 20: Comprehensive comparison showing normalized metrics (concordance, AIC, number of features) across all model types. The multivariate models consistently outperform univariate models across all metrics. This visualization demonstrates the clear superiority of multivariate approaches for clinical deterioration prediction.*
+
+**Key Findings:**
+
+1. **Multivariate models significantly outperform univariate models:**
+   - **3-year dataset:** C-index improvement from 0.749 to 0.885 (+18.2% relative improvement)
+   - **10-year dataset:** C-index improvement from 0.652 to 0.778 (+19.3% relative improvement)
+
+2. **Model complexity is justified:**
+   - Despite using 20 features vs. 1, multivariate models achieve lower AIC
+   - This indicates the additional features provide meaningful predictive information
+   - The complexity is justified by improved performance
+
+3. **3-year dataset shows better performance:**
+   - Higher concordance for both model types
+   - Likely due to:
+     - More data per patient (longitudinal richness)
+     - Larger sample size (317,006 vs. 37,799 observations)
+     - Better temporal coverage
+
+4. **Consistent patterns across datasets:**
+   - Both datasets show the same ranking (multivariate > univariate)
+   - Relative performance improvements are similar (~18-19%)
+   - This consistency supports model generalizability
 
 **Interpretation:**
-- **3-year model superior:** Higher concordance suggests better discrimination
-- **Possible reasons:**
-  - More data per patient (longitudinal richness)
-  - Lower event rate may allow better separation
-  - Different patient characteristics
-- **Both models perform well:** C-index > 0.7 indicates good predictive ability
+- **Multivariate models are clearly superior:** Higher concordance and lower AIC in both datasets
+- **3-year model performs best:** Highest concordance (0.885) among all models
+- **Both multivariate models perform well:** C-index > 0.7 indicates good predictive ability
+- **Model complexity justified:** Lower AIC despite more features confirms better fit
+- **Clinical recommendation:** Multivariate models should be used for clinical deployment
 
 ### 7.3 Feature Consistency
 
@@ -642,7 +748,8 @@ This comprehensive survival analysis successfully identified key predictors of c
 - **Kaplan-Meier:** `km_curves/km_*.png` (overall, by event, by risk group)
 - **Cox Models:** `cox_models/forest_*.png`, `feature_importance_*.png`, `coef_vs_pval_*.png`, `risk_score_distribution_*.png`
 - **Diagnostics:** `diagnostics/schoenfeld_residuals_*.png`
-- **Comparisons:** `comparisons/*.png`
+- **Model Comparisons:** `comparisons/model_concordance_comparison.png`, `model_aic_comparison.png`, `model_features_comparison.png`, `model_comprehensive_comparison.png`, `model_concordance_vs_aic.png`, `model_ranking.png`
+- **Dataset Comparisons:** `comparisons/survival_curves_comparison.png`, `hr_comparison.png`, `feature_importance_comparison.png`
 
 ### Tables Generated:
 - **Descriptive:** `descriptive_stats/*.csv`

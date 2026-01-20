@@ -1,0 +1,3 @@
+"model","dataset","concordance","aic","bic","n_features","n_observations"
+"Multivariate (Top 20)","3-year",0.8853,23133.1,23222.18,20,317006
+"Univariate (Top Feature)","3-year",0.7494,25577.03,25581.98,1,317006
