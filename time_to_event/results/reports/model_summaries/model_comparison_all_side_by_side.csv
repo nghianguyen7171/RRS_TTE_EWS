@@ -1,3 +1,4 @@
 "model","concordance_3-year","concordance_10-year","aic_3-year","aic_10-year","bic_3-year","bic_10-year","n_features_3-year","n_features_10-year"
-"Univariate (Top Feature)",0.7494,0.6524,25577.03,35752.03,25581.98,35757.51,1,1
 "Multivariate (Top 20)",0.8853,0.7778,23133.1,34391.13,23222.18,34489.78,20,20
+"Univariate (Top Feature)",0.7494,0.6524,25577.03,35752.03,25581.98,35757.51,1,1
+"Stepwise Selection",0.885,0.778,22074.45,34044.19,22193.22,34181.2,24,25
