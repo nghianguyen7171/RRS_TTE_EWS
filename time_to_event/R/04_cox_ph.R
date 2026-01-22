@@ -160,7 +160,7 @@ perform_multivariate_cox <- function(data_obj, dataset_name, top_n = 20) {
   
   # Prepare data
   data_clean <- data %>%
-    select(all_of(c("surv_obj", top_features))) %>%
+    dplyr::select(all_of(c("surv_obj", top_features))) %>%
     na.omit()
   
   cat("Observations after removing missing values:", nrow(data_clean), "\n")

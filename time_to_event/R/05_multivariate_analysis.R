@@ -39,16 +39,23 @@ perform_stepwise_selection <- function(data_obj, dataset_name, direction = "both
   initial_features <- univariate_results$results[
     univariate_results$results$pvalue < 0.1, "feature"
   ]
+  # Drop NAs and keep only features present in data
+  initial_features <- initial_features[!is.na(initial_features)]
+  initial_features <- intersect(initial_features, feature_names)
   
   if (length(initial_features) > 50) {
     initial_features <- head(initial_features, 50)  # Limit to top 50
   }
   
   cat("Initial features (p < 0.1):", length(initial_features), "\n")
+  if (length(initial_features) == 0) {
+    cat("No eligible features for stepwise selection; skipping.\n")
+    return(NULL)
+  }
   
   # Prepare data
   data_clean <- data %>%
-    select(all_of(c("surv_obj", initial_features))) %>%
+    dplyr::select(all_of(c("surv_obj", initial_features))) %>%
     na.omit()
   
   cat("Observations:", nrow(data_clean), "\n")
@@ -107,7 +114,7 @@ perform_lasso_selection <- function(data_obj, dataset_name) {
   
   # Prepare data
   data_clean <- data %>%
-    select(all_of(c("surv_obj", feature_names))) %>%
+    dplyr::select(all_of(c("surv_obj", feature_names))) %>%
     na.omit()
   
   cat("Observations:", nrow(data_clean), "\n")
@@ -209,7 +216,7 @@ test_interactions <- function(data_obj, dataset_name, top_features = 10) {
   
   # Prepare data
   data_clean <- data %>%
-    select(all_of(c("surv_obj", top_features_list))) %>%
+    dplyr::select(all_of(c("surv_obj", top_features_list))) %>%
     na.omit()
   
   # Test a few key interactions (to avoid combinatorial explosion)

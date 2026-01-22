@@ -70,7 +70,7 @@ load_survival_data <- function(dataset = c("3year", "10year")) {
   if ("time_to_event" %in% colnames(metadata) && "event_occurred" %in% colnames(metadata)) {
     cat("Using time_to_event and event_occurred from metadata\n")
     # Remove them from metadata temporarily to avoid duplicates
-    metadata_clean <- metadata %>% select(-time_to_event, -event_occurred)
+    metadata_clean <- metadata %>% dplyr::select(-time_to_event, -event_occurred)
     survival_data <- cbind(
       metadata_clean,
       features,
