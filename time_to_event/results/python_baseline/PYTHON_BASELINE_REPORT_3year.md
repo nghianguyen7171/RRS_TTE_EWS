@@ -66,23 +66,23 @@ train/validation/test splitting to avoid data leakage.
 - IBS (Test): N/A
 - ECE (Test): 0.001
 
-![Overall Survival Curve](figures/survival_curves/coxph_overall_3year.png)
+![Overall Survival Curve](time_to_event/results/python_baseline/figures/survival_curves/coxph_overall_3year.png)
 
 *Figure: Overall survival curve for CoxPH.*
 
-![Survival by Risk Quartiles](figures/survival_curves/coxph_by_risk_3year.png)
+![Survival by Risk Quartiles](time_to_event/results/python_baseline/figures/survival_curves/coxph_by_risk_3year.png)
 
 *Figure: Survival curves stratified by risk quartiles for CoxPH.*
 
-![Survival by Event Status](figures/survival_curves/coxph_by_event_3year.png)
+![Survival by Event Status](time_to_event/results/python_baseline/figures/survival_curves/coxph_by_event_3year.png)
 
 *Figure: Survival curves by event status (validation) for CoxPH.*
 
-![Baseline Hazard](figures/hazard_curves/coxph_baseline_3year.png)
+![Baseline Hazard](time_to_event/results/python_baseline/figures/hazard_curves/coxph_baseline_3year.png)
 
 *Figure: Baseline hazard function for CoxPH.*
 
-![Hazard by Risk Groups](figures/hazard_curves/coxph_by_risk_3year.png)
+![Hazard by Risk Groups](time_to_event/results/python_baseline/figures/hazard_curves/coxph_by_risk_3year.png)
 
 *Figure: Hazard functions by risk groups for CoxPH.*
 
